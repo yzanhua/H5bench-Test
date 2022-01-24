@@ -2,12 +2,12 @@ Content
 ====
 1. test1: default tests. 4 proc + 16M/proc
 2. test2: conti write + 8 proc + 16M/proc
-3. test3: conti write + 8 proc + 16M/proc  -- failed -- wrong-config
+3. test3: conti write + 8 proc + 16M/proc  -- ERROR -- wrong-config
 4. test4: conti write + 8 proc + 8M/proc + log-vol + collective data off
 5. test5: conti write + 8 proc + 8M/proc + collective data off
 6. test6: conti write + 8 proc + 8M/proc + collective data on
-7. test7: INTERLEAVED write + 8 proc + 8M/proc + log-vol + collective data on
-8. test7: INTERLEAVED write + 8 proc + 8M/proc + collective data on
+7. test7: INTERLEAVED write + 8 proc + 8M/proc + log-vol + collective data on  --- ERROR
+8. test8: INTERLEAVED write + 8 proc + 8M/proc + collective data on  --- ERROR
 
 
 
