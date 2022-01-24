@@ -27,3 +27,20 @@ optional arguments:
 ```
 
 More details at [link](https://h5bench.readthedocs.io/en/latest/running.html).
+
+H5Bench key points [(paper)](https://sdm.lbl.gov/~sbyna/research/papers/2021/202106-CUG_2021_h5bench.pdf):
+1. various in memory data models and file access patterns
+2. asynchronous I/O feature
+3. performance evaluation of compression in I/O libraries
+4. evaluation and optimization of user-level metadata access costs
+
+
+
+## h5bench: Read / Write Benchmark 
+1. I/O operations (read, write, and HDF5 metadata), 
+2. data locality (arrays of basic data types and arrays of structure representations both in memory and in file)
+3. array dimensionality (1D arrays, 2D meshes, 3D cubes)
+4. different I/O modes (synchronous and asynchronous).
+
+It assumes: simulation or analysis done in many time steps with multiple subsequent computation and I/O phases. Write: use sleep () to emulate the computation time. Read: use sleep() to emulate data analysis time.
+
