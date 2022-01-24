@@ -1,0 +1,45 @@
+config file: full-test/b91d3479/h5bench.cfg, output data file: full-test/test.h5
+=======================================
+Benchmark configuration: 
+File: full-test/b91d3479/h5bench.cfg
+Number of particles per rank: 8388608
+Number of time steps: 5
+Emulated compute time per timestep: 1
+Async mode = 0 (0: ASYNC_NON; 1: ASYNC_EXP; 2: ASYNC_IMP)
+Collective metadata operations: YES.
+Collective buffering for data operations: YES.
+Number of dimensions: 1
+    Dim_1: 16777216
+=======================================
+Start benchmark: h5bench_write, Number of particles per rank: 8 M
+Total number of particles: 64M
+Collective write: enabled.
+Opened HDF5 file... 
+Writing Timestep_0 ... 
+    data_write_interleaved_to_interleaved: Finished writing time step 
+Computing... 
+Writing Timestep_1 ... 
+    data_write_interleaved_to_interleaved: Finished writing time step 
+Computing... 
+Writing Timestep_2 ... 
+    data_write_interleaved_to_interleaved: Finished writing time step 
+Computing... 
+Writing Timestep_3 ... 
+    data_write_interleaved_to_interleaved: Finished writing time step 
+Computing... 
+Writing Timestep_4 ... 
+    data_write_interleaved_to_interleaved: Finished writing time step 
+
+ Performance measured with 8 ranks, 
+==================  Performance results  =================
+Total emulated compute time 4 ms
+Total write size = 10 GB
+Raw write time = 6.469 sec
+Metadata time = 0.001 sec
+H5Fcreate() takes 190306.000 sec
+H5Fflush() takes 71036392.000 sec
+H5Fclose() takes 20309866.000 sec
+Observed completion time = 102.030 sec
+Sync Raw write rate = 1.546 GB/sec 
+Sync Observed write rate = 0.102 GB/sec
+===========================================================

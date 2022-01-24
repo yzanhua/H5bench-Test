@@ -1,0 +1,66 @@
+2022-01-24 10:42:46,822 h5bench - INFO - Starting h5bench Suite
+2022-01-24 10:42:46,823 h5bench - INFO - Lustre support not detected
+2022-01-24 10:42:46,823 h5bench - INFO - h5bench [write] - Starting
+2022-01-24 10:42:46,823 h5bench - INFO - h5bench [write] - DIR: full-test/2c7a2699/
+2022-01-24 10:42:46,823 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:42:46,823 h5bench - INFO - mpirun -np 4 h5bench_write full-test/2c7a2699/h5bench.cfg full-test/test.h5
+2022-01-24 10:44:12,022 h5bench - INFO - SUCCESS
+2022-01-24 10:44:12,027 h5bench - INFO - Runtime: 85.2034640 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:12,027 h5bench - INFO - h5bench [write] - Complete
+2022-01-24 10:44:12,027 h5bench - INFO - h5bench [exerciser] - Starting
+2022-01-24 10:44:12,027 h5bench - INFO - h5bench [exerciser] - DIR: full-test/5b6f01a0/
+2022-01-24 10:44:12,027 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:12,027 h5bench - INFO - mpirun -np 4 h5bench_exerciser --numdims 2  --minels 8 8  --nsizes 3  --bufmult 2 2  --dimranks 8 4 
+2022-01-24 10:44:12,275 h5bench - INFO - SUCCESS
+2022-01-24 10:44:12,275 h5bench - INFO - Runtime: 0.2482712 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:12,275 h5bench - INFO - h5bench [exerciser] - Complete
+2022-01-24 10:44:12,275 h5bench - INFO - h5bench [exerciser] - Starting
+2022-01-24 10:44:12,275 h5bench - INFO - h5bench [exerciser] - DIR: full-test/4f01f318/
+2022-01-24 10:44:12,275 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:12,276 h5bench - INFO - mpirun -np 4 h5bench_exerciser --numdims 2  --minels 8 8  --nsizes 3  --bufmult 2 2  --dimranks 8 4 
+2022-01-24 10:44:12,415 h5bench - INFO - SUCCESS
+2022-01-24 10:44:12,416 h5bench - INFO - Runtime: 0.1400995 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:12,416 h5bench - INFO - h5bench [exerciser] - Complete
+2022-01-24 10:44:12,416 h5bench - INFO - h5bench [exerciser] - Starting
+2022-01-24 10:44:12,416 h5bench - INFO - h5bench [exerciser] - DIR: full-test/7e63fae2/
+2022-01-24 10:44:12,416 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:12,416 h5bench - INFO - mpirun -np 4 h5bench_exerciser --numdims 2  --minels 8 8  --nsizes 3  --bufmult 2 2  --dimranks 8 4 
+2022-01-24 10:44:12,559 h5bench - INFO - SUCCESS
+2022-01-24 10:44:12,560 h5bench - INFO - Runtime: 0.1436944 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:12,560 h5bench - INFO - h5bench [exerciser] - Complete
+2022-01-24 10:44:12,560 h5bench - INFO - h5bench [exerciser] - Starting
+2022-01-24 10:44:12,560 h5bench - INFO - h5bench [exerciser] - DIR: full-test/3c30dbb8/
+2022-01-24 10:44:12,560 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:12,560 h5bench - INFO - mpirun -np 4 h5bench_exerciser --numdims 2  --minels 8 8  --nsizes 3  --bufmult 2 2  --dimranks 8 4 
+2022-01-24 10:44:12,697 h5bench - INFO - SUCCESS
+2022-01-24 10:44:12,697 h5bench - INFO - Runtime: 0.1371841 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:12,697 h5bench - INFO - h5bench [exerciser] - Complete
+2022-01-24 10:44:12,697 h5bench - INFO - h5bench [exerciser] - Starting
+2022-01-24 10:44:12,697 h5bench - INFO - h5bench [exerciser] - DIR: full-test/32efdb56/
+2022-01-24 10:44:12,697 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:12,697 h5bench - INFO - mpirun -np 4 h5bench_exerciser --numdims 2  --minels 8 8  --nsizes 3  --bufmult 2 2  --dimranks 8 4 
+2022-01-24 10:44:12,828 h5bench - INFO - SUCCESS
+2022-01-24 10:44:12,828 h5bench - INFO - Runtime: 0.1303823 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:12,828 h5bench - INFO - h5bench [exerciser] - Complete
+2022-01-24 10:44:12,828 h5bench - INFO - h5bench [read] - Starting
+2022-01-24 10:44:12,828 h5bench - INFO - h5bench [read] - DIR: full-test/2ab34bcd/
+2022-01-24 10:44:12,828 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:12,828 h5bench - INFO - mpirun -np 4 h5bench_read full-test/2ab34bcd/h5bench.cfg full-test/test.h5
+2022-01-24 10:44:49,921 h5bench - INFO - SUCCESS
+2022-01-24 10:44:49,921 h5bench - INFO - Runtime: 37.0929492 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:44:49,921 h5bench - INFO - h5bench [read] - Complete
+2022-01-24 10:44:49,921 h5bench - INFO - h5bench [write] - Starting
+2022-01-24 10:44:49,921 h5bench - INFO - h5bench [write] - DIR: full-test/8fbf601f/
+2022-01-24 10:44:49,921 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:44:49,921 h5bench - INFO - mpirun -np 4 h5bench_write full-test/8fbf601f/h5bench.cfg full-test/test-two.h5
+2022-01-24 10:45:44,017 h5bench - INFO - SUCCESS
+2022-01-24 10:45:44,017 h5bench - INFO - Runtime: 54.0957181 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:45:44,017 h5bench - INFO - h5bench [write] - Complete
+2022-01-24 10:45:44,017 h5bench - INFO - h5bench [metadata] - Starting
+2022-01-24 10:45:44,017 h5bench - INFO - h5bench [metadata] - DIR: full-test/fb189038/
+2022-01-24 10:45:44,017 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-24 10:45:44,017 h5bench - INFO - mpirun -np 4 h5bench_hdf5_iotest full-test/fb189038/hdf5_iotest.ini
+2022-01-24 10:45:55,587 h5bench - INFO - SUCCESS
+2022-01-24 10:45:55,587 h5bench - INFO - Runtime: 11.5698180 seconds (elapsed time, includes allocation wait time)
+2022-01-24 10:45:55,587 h5bench - INFO - h5bench [metadata] - Complete
+2022-01-24 10:45:55,587 h5bench - INFO - Finishing h5bench Suite

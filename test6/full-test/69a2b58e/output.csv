@@ -1,0 +1,10 @@
+NUM_RANKS, 8
+CollectiveWrite, YES
+CollectiveMetaWrite, NO
+Total emulated compute time, 4, sec
+Total_write_size, 10, GB
+Raw_write_time, 27.446, sec
+Raw_write_rate, 0.364, GB/sec
+Core_metadata_time, 0.001, sec
+Observed_write_rate, 0.101, GB/sec
+Observed_completion_time, 102.759, sec

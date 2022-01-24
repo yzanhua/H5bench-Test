@@ -1,0 +1,8 @@
+NUM_RANKS, 4
+Total emulated compute time, 4, sec
+Total read size, 10, GB
+Metadata_time, 0.105, sec
+Raw read time, 28.490, sec
+Observed completion time, 36.974, sec
+Raw read rate, 0.351, GB/sec
+Observed read rate, 0.303, GB/sec

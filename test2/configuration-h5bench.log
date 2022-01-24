@@ -1,0 +1,10 @@
+2022-01-24 11:20:45,472 h5bench - INFO - Starting h5bench Suite
+2022-01-24 11:20:45,590 h5bench - INFO - Lustre support not detected
+2022-01-24 11:20:45,590 h5bench - INFO - h5bench [write] - Starting
+2022-01-24 11:20:45,590 h5bench - INFO - h5bench [write] - DIR: full-test/e7494494/
+2022-01-24 11:20:45,590 h5bench - INFO - Parallel setup: mpirun -np 8
+2022-01-24 11:20:45,590 h5bench - INFO - mpirun -np 8 h5bench_write full-test/e7494494/h5bench.cfg full-test/test.h5
+2022-01-24 11:25:16,934 h5bench - INFO - SUCCESS
+2022-01-24 11:25:16,934 h5bench - INFO - Runtime: 271.3442006 seconds (elapsed time, includes allocation wait time)
+2022-01-24 11:25:16,934 h5bench - INFO - h5bench [write] - Complete
+2022-01-24 11:25:16,934 h5bench - INFO - Finishing h5bench Suite

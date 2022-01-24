@@ -1,0 +1,40 @@
+config file: full-test/2ab34bcd/h5bench.cfg, read data file: full-test/test.h5
+dims[0] = 67108864 (total number for the file)
+Total particles in the file: 67108864
+Number of particles available per rank: 16777216 
+Opened HDF5 file ... [full-test/test.h5]
+=======================================
+Benchmark configuration: 
+File: full-test/2ab34bcd/h5bench.cfg
+Number of particles per rank: 16777216
+Number of time steps: 5
+Emulated compute time per timestep: 1
+Async mode = 0 (0: ASYNC_NON; 1: ASYNC_EXP; 2: ASYNC_IMP)
+Collective metadata operations: NO.
+Collective buffering for data operations: NO.
+Number of dimensions: 1
+    Dim_1: 16777216
+=======================================
+Reading Timestep_0 ... 
+  Read 8 variable completed
+Computing... 
+Reading Timestep_1 ... 
+  Read 8 variable completed
+Computing... 
+Reading Timestep_2 ... 
+  Read 8 variable completed
+Computing... 
+Reading Timestep_3 ... 
+  Read 8 variable completed
+Computing... 
+Reading Timestep_4 ... 
+  Read 8 variable completed
+
+ =================  Performance results  =================
+Total emulated compute time = 4 sec
+Total read size = 10 GB
+Raw read time = 28.490 sec 
+Metadata time = 0.105 sec
+Observed read completion time = 36.974 sec
+Sync Raw read rate = 0.351 GB/sec 
+Sync Observed read rate = 0.303272 GB/sec
