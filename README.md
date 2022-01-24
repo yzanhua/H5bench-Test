@@ -53,8 +53,7 @@ WRITE PATTERN:
     1. CONTIG: represents a HDF5 dataset of basic data types (i.e., int, float, double, etc.)
     2. INTERLEAVED represents a dataset of a compound datatype;
 
-Details:
-===
+### Details:
 A particle looks like:
 ```c
 typedef struct Particle {
@@ -95,4 +94,13 @@ When saving, the hdf5 looks like:
     |--> /particles # group "particles". is the only group. Each particle is saved in this group using COMPOUND_TYPE.
 
 
-3. STRIDED: represents a few elements in an array of basic data types that are separated by a constant stride
+3. STRIDED: ?
+
+MPI
+    
+1. work is divided among mpi processes using the first dimension of the data array.
+
+### Exerciser Benchmark
+1. creates an HDF5 use case with some ideas/code borrowed from other benchmarks (namely IOR, VPICIO and FLASHIO)
+ 
+### Metadata Stress Benchmark
