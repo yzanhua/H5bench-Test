@@ -112,14 +112,14 @@ collevtive/independet per user's choice.
 
 
  
-## Metadata Stress Benchmark
+# Metadata Stress Benchmark
 This benchmark accesses the performance of an HDF5 "common pattern". The pattern consists of one write phase and then one read phase (first write then read).
 
-**Write Phase:**
+## Write Phase:
 
 It uses (`p_rows` * `p_columns`) many mpi-processes to collectively/independently (per user's choice) create one 4D dataset of `doubles`. The dataset has dimensions `dims` = `num_steps` * `num_arrays` * `total_rows` * `total_cols`. The entire dataset is diveded along the last two dimensions, meaning that each mpi process is responsible for `num_steps` * `num_arrays` * (`total_rows`/`p_rows`) * (`total_cols`/`p_cols`) much of data. Each mpi process will call `num_steps` * `num_arrays` many H5Sselect_hyperslab and H5Dwrites, and each write writes (`total_rows`/`p-rows`) * (`total_cols`/`p-cols`) much of data.
 
-**Read Phase:**
+## Read Phase:
 
 Read Phase is identical to Write Phase except that all `writes` are changed to `reads`.
 
