@@ -8,6 +8,8 @@ Content
 6. test6: conti write + 8 proc + 8M/proc + collective data on
 7. test7: INTERLEAVED write + 8 proc + 8M/proc + log-vol + collective data on  --- ERROR
 8. test8: INTERLEAVED write + 8 proc + 8M/proc + collective data on  --- ERROR
+9. test9: INTERLEAVED write + 2 proc + 1M/proc + collective data off  --- ERROR
+10. test10: Simplified version of INTERLEAVED write that works correctly. Study why 5 H5Dwrite for the case of "contigious mem -> interleaved file"
 
 
 
@@ -104,3 +106,15 @@ collevtive/independet --> user decides.
 
  
 ### Metadata Stress Benchmark
+This benchmark accesses the performance of an HDF5 "common pattern". The pattern consists of one write phase and then one read phase (first write then read).
+
+**Write Phase:**
+
+It uses (`p_rows` * `p_columns`) many mpi-processes to collectively/independently (per user's choice) create one 4D dataset of `doubles`. The dataset has dimensions `dims` = `num_steps` * `num_arrays` * `total_rows` * `total_cols`. The entire dataset is diveded along the last two dimensions, meaning that each mpi process is responsible for `num_steps` * `num_arrays` * (`total_rows`/`p_rows`) * (`total_cols`/`p_cols`) much of data. Each mpi process will call `num_steps` * `num_arrays` many H5Sselect_hyperslab and H5Dwrites, and each write writes (`total_rows`/`p-rows`) * (`total_cols`/`p-cols`) much of data.
+
+**Read Phase:**
+
+Read Phase is identical to Write Phase except that all `writes` are changed to `reads`.
+
+
+
