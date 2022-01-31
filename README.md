@@ -123,5 +123,37 @@ It uses (`p_rows` * `p_columns`) many mpi-processes to collectively/independentl
 
 Read Phase is identical to Write Phase except that all `writes` are changed to `reads`.
 
+# Exerciser Benchmark
+The algorithm does the following in parallel over all MPI ranks:
+```shell
+Loop over NSIZES:
+    1. Loop over NUM_ITERATION:
+        1. Create the same file (ACC_TRUNC)
+        2. Add group (/Data)
+        3. (optional) add 64 attributes to the /Data group
+        4. Create a dataset under the group /Data.
+        5. Write to the dataset.
+        6. Close the file, reopen.
+        7. Read the dataset and check correctness. close the dataset.
+        8. (optional) Write a dataset of a compound type, 
+           (dimensions same as before) at 
+           /Data/derivedData/sim
+        9. close everything
+        10. Record time.
+    2. Calculate time-statistics and print. (max-time, min-time, avg-time, etc)
+    3. Increase the number of elements in each dimension.
+```
+Other Things Controlled by user:
+1. `num_dims`
+2.  number of elements in each dimension.
+3. file block, file stride, mem block, mem stride.
+4. collective/independent mpi-io
+5. Chunked.
+6. MPI-rank division in each dimension. (default: along the first dim only)
+
+
+
+
+
 
 
