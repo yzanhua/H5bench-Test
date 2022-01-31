@@ -49,7 +49,7 @@ It assumes: simulation or analysis done in many time steps with multiple subsequ
 
 
 
-## WRITE PATTERN:
+## Data Patterns:
 ### Some Helpful Structs:
 A particle looks like:
 ```c
