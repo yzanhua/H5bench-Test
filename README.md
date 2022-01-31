@@ -74,33 +74,33 @@ typedef struct data_md {
     float *id_2;
 } data_contig_md;
 ```
-MEM_PATTERN:
-1. CONTIG: allocate data using `data_md`. e.g all particles' `id_1`s are saved at `data_md->id_1`. When saving, the hdf5 looks like:
+**PATTERN:**
+1. contigious mem -> contigious file:
 
-    /        # root
+    `5` H5Dcreate, one for each property.
     
-    |--> /x # group "x". saving all x values.
+    `5` H5Dwrite, one for each property.
+2. contigious mem -> interleaved file:
 
-    |--> /y
+    `1` H5Dcreate, for the entire particles
 
-    |--> /z
-    ....
+    `5` H5Dwrite, one for each property, each write writes to target pos directly.
 
-2. INTERLEAVED: allocate data using `Particle`. Particles are saved at an array of `Particle`.
-When saving, the hdf5 looks like:
+3. interleaved mem -> interleaved file:
+
+    `1` H5Dcreate, for the entire particles
+
+    `1` H5Dwrite, for the entire particles
+
+4. interleaved mem -> contig file:
+
+    `5` H5Dcreate, one for each property.
     
-    /        # root
-    
-    |--> /particles # group "particles". is the only group. Each particle is saved in this group using COMPOUND_TYPE.
+    `5` H5Dwrite, one for each property.
+
+**MPI-IO:**
+collevtive/independet --> user decides.
 
 
-3. STRIDED: ?
-
-MPI
-    
-1. work is divided among mpi processes using the first dimension of the data array.
-
-### Exerciser Benchmark
-1. creates an HDF5 use case with some ideas/code borrowed from other benchmarks (namely IOR, VPICIO and FLASHIO)
  
 ### Metadata Stress Benchmark
