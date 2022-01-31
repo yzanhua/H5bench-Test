@@ -39,7 +39,7 @@ H5Bench key points [(paper)](https://sdm.lbl.gov/~sbyna/research/papers/2021/202
 
 
 
-## h5bench: Read / Write Benchmark 
+# h5bench: Read / Write Benchmark 
 1. I/O operations (read, write, and HDF5 metadata), 
 2. data locality (arrays of basic data types and arrays of structure representations both in memory and in file)
 3. array dimensionality (1D arrays, 2D meshes, 3D cubes)
@@ -56,7 +56,7 @@ WRITE PATTERN:
     1. CONTIG: represents a HDF5 dataset of basic data types (i.e., int, float, double, etc.)
     2. INTERLEAVED represents a dataset of a compound datatype;
 
-### Details:
+## Details:
 A particle looks like:
 ```c
 typedef struct Particle {
@@ -106,7 +106,7 @@ collevtive/independet --> user decides.
 
 
  
-### Metadata Stress Benchmark
+## Metadata Stress Benchmark
 This benchmark accesses the performance of an HDF5 "common pattern". The pattern consists of one write phase and then one read phase (first write then read).
 
 **Write Phase:**
