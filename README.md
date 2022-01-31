@@ -47,16 +47,10 @@ H5Bench key points [(paper)](https://sdm.lbl.gov/~sbyna/research/papers/2021/202
 
 It assumes: simulation or analysis done in many time steps with multiple subsequent computation and I/O phases. Write: use sleep () to emulate the computation time. Read: use sleep() to emulate data analysis time.
 
-WRITE PATTERN:
-1. MEM_PATTERN: the source (the data layout in the memory):
-    1. CONTIG: represents arrays of basic data types (i.e., int, float, double, etc.)
-    2. INTERLEAVED: represents an array of structure (AOS) where each array element is a C struct
-    3. STRIDED: represents a few elements in an array of basic data types that are separated by a constant stride
-2. FILE_PATTERN: the destination (the data layout in the resulting file)
-    1. CONTIG: represents a HDF5 dataset of basic data types (i.e., int, float, double, etc.)
-    2. INTERLEAVED represents a dataset of a compound datatype;
 
-## Details:
+
+## WRITE PATTERN:
+### Some Helpful Structs:
 A particle looks like:
 ```c
 typedef struct Particle {
@@ -77,7 +71,19 @@ typedef struct data_md {
     float *id_2;
 } data_contig_md;
 ```
-**PATTERN:**
+
+### Choicese of Pattern
+User can specify `MEM_PATTERN` and `FILE_PATTERN`:
+1. `MEM_PATTERN`: the source (the data layout in the memory):
+    1. `CONTIG`: represents arrays of basic data types (i.e., int, float, double, etc.). i.e. particles are saved using `data_contig_md`, where e.g. `data_md->x[0]` is the `x` value of the 1st particle.
+    2. `INTERLEAVED`: represents an array of structure (AOS) where each array element is a C struct. particles are saved using an array of `Particle`.
+    3. `STRIDED`: represents a few elements in an array of basic data types that are separated by a constant stride
+2. `FILE_PATTERN`: the destination (the data layout in the resulting file)
+    1. `CONTIG`: represents a HDF5 dataset of basic data types (i.e., int, float, double, etc.)
+    2. `INTERLEAVED` represents a dataset of a compound datatype;
+
+
+## Mem to File Patterns
 1. contigious mem -> contigious file:
 
     `5` H5Dcreate, one for each property.
@@ -101,8 +107,8 @@ typedef struct data_md {
     
     `5` H5Dwrite, one for each property.
 
-**MPI-IO:**
-collevtive/independet --> user decides.
+## MPI-IO:
+collevtive/independet per user's choice.
 
 
  
