@@ -1,0 +1,10 @@
+2022-01-31 00:36:56,566 h5bench - INFO - Starting h5bench Suite
+2022-01-31 00:36:56,567 h5bench - INFO - Lustre support not detected
+2022-01-31 00:36:56,567 h5bench - INFO - h5bench [metadata] - Starting
+2022-01-31 00:36:56,567 h5bench - INFO - h5bench [metadata] - DIR: full-test/e5943ff6/
+2022-01-31 00:36:56,567 h5bench - INFO - Parallel setup: mpirun -np 4
+2022-01-31 00:36:56,567 h5bench - INFO - mpirun -np 4 h5bench_hdf5_iotest full-test/e5943ff6/hdf5_iotest.ini
+2022-01-31 00:37:18,079 h5bench - INFO - SUCCESS
+2022-01-31 00:37:18,096 h5bench - INFO - Runtime: 21.5287325 seconds (elapsed time, includes allocation wait time)
+2022-01-31 00:37:18,096 h5bench - INFO - h5bench [metadata] - Complete
+2022-01-31 00:37:18,096 h5bench - INFO - Finishing h5bench Suite

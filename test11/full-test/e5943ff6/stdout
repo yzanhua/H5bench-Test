@@ -1,0 +1,25 @@
+Config loaded from 'full-test/e5943ff6/hdf5_iotest.ini':
+	steps=20, arrays=500, rows=100, columns=200, scaling=weak
+	proc-grid=2x2, slowest-dimension=step, rank=4
+	layout=contiguous, mpi-io=independent
+
+Wall clock [s]:		21.42
+File size [B]:		6400002048
+---------------------------------------------
+Measurement:		_MIN (over MPI ranks)
+			^MAX (over MPI ranks)
+---------------------------------------------
+Write phase [s]:	_15.30
+			^15.30
+Create time [s]:	_0.00
+			^0.00
+Write time [s]:		_15.04
+			^15.09
+Write rate [MiB/s]:	_101.11
+			^101.48
+Read phase [s]:		_6.12
+			^6.12
+Read time [s]:		_6.07
+			^6.11
+Read rate [MiB/s]:	_249.70
+			^251.48

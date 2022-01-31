@@ -10,6 +10,7 @@ Content
 8. test8: INTERLEAVED write + 8 proc + 8M/proc + collective data on  --- ERROR
 9. test9: INTERLEAVED write + 2 proc + 1M/proc + collective data off  --- ERROR
 10. test10: Simplified version of INTERLEAVED write that works correctly. Study why 5 H5Dwrite for the case of "contigious mem -> interleaved file"
+11. test11: Metadata Stress.
 
 
 
