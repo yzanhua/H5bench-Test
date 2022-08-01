@@ -1,3 +1,4 @@
+# H5Bench
 This file explains how to run external benchmark [h5bench](https://h5bench.readthedocs.io/en/latest/) w/wo Log Vol plugin.
 
 ## Install
@@ -134,7 +135,7 @@ This file explains how to run external benchmark [h5bench](https://h5bench.readt
    export HDF5_PLUGIN_PATH="/path/to/log-vol-plugin/lib"
    export HDF5_VOL_CONNECTOR="LOG under_vol=0;under_info={}"
    ```
-2. Modify `h5bench` script. We need to modify `h5bench` script because by default, `h5bench` disables usage of any custom HDF5 plugin other than `async`. We need remove such restriction. This step is simple since `h5bench` is a python script and we only need to modify one line.
+2. Modify `h5bench` script (located in `/path/to/h5bench/install/bin`). We need to modify `h5bench` script because by default, `h5bench` disables usage of any custom HDF5 plugin other than `async`. We need remove such restriction. This step is simple since `h5bench` is a python script and we only need to modify one line.
    
    search for the following function in `h5bench`:
    ```python
@@ -151,7 +152,7 @@ This file explains how to run external benchmark [h5bench](https://h5bench.readt
         # if 'HDF5_VOL_CONNECTOR' in self.vol_environment:
         #    del self.vol_environment['HDF5_VOL_CONNECTOR']
    ```
-1. run commands
+1. Run commands
     ```shell
     h5bench configuration.json
     ``` 
